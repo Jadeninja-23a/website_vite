@@ -46,7 +46,7 @@ const workshopData = [
   },
   {
     id: 6,
-    title: 'Internet of Things',
+    title: 'Internet of Things Workshop Resources',
     description: 'Hands-on workshop exploring IoT systems, edge AI, and communication technologies.\n',
     image: resoimg + 'mcu.webp',
     link: 'https://github.com/Radhika-B1084/ESP32CAM-face',

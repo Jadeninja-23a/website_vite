@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FileText, Search } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom'
 
 const CertificatePortal = () => {
   const [selectedEvent, setSelectedEvent] = useState('Control Theory Bootcamp');

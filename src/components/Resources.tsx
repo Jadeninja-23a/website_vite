@@ -45,13 +45,6 @@ const workshopData = [
     link: 'https://github.com/erciitb/LS2025_Control_Theory/tree/main',
   },
   {
-    id: 6,
-    title: 'Internet of Things Workshop Resources',
-    description: 'Hands-on workshop exploring IoT systems, edge AI, and communication technologies.\n',
-    image: resoimg + 'mcu.webp',
-    link: 'https://github.com/Radhika-B1084/ESP32CAM-face',
-  },
-  {
     id: 3,
     title: 'ITSP Collaborative and Prototyping tools',
     description: 'Devise and design the perfect ITSA Project by using the right tools and software when remote.',

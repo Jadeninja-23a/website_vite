@@ -149,7 +149,7 @@ export default function Week1() {
                 <div className="p-8 pt-20">
                     <h3 className="text-2xl font-bold mb-6 text-blue-400">Week 1 Navigation</h3>
                     <ul className="space-y-4">
-                        <li><button onClick={() => navigate('/winteros')}className="text-lg hover:text-blue-400 transition-colors w-full text-left">❄️ WinterROS Home</button></li>
+                        <li><button onClick={() => navigate('/winteros')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">❄️ WinterROS Home</button></li>
                         <li><button onClick={() => scrollToSection('intro')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">⚙️ Understanding Stark OS</button></li>
                         <li><button onClick={() => scrollToSection('configuring')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">🔧 Configuring Environment</button></li>
                         <li><button onClick={() => scrollToSection('installing')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">📦 Installing Tools</button></li>
@@ -175,7 +175,23 @@ export default function Week1() {
             )}
 
             {/* Hero Section */}
-            <header className="text-center px-6 py-20 pt-32 glass-strong mx-6 rounded-3xl">
+            <header className="text-center px-6 py-20 pt-32 glass-strong mx-6 rounded-3xl relative">
+                {/* Back Button */}
+                <button
+                    onClick={() => navigate('/winteros')}
+                    className="absolute top-30 left-8 flex items-center gap-3 px-6 py-3 glass rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300 group text-lg font-semibold shadow-lg"
+                >
+                    <svg
+                        className="w-6 h-6 transform group-hover:-translate-x-2 transition-transform duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span>Back to WinterROS Home</span>
+                </button>
+
                 <div className="max-w-6xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-bold mb-4 text-blue-400">
                         Week 1<span className="text-white"> — Understanding Stark OS</span>
@@ -1932,7 +1948,7 @@ from glob import glob`}</code>
                     </p>
                 </section>
 
-                {/* Assignment */}
+                {/* Assignment*/}
                 <section id="assignment" className="glass-strong rounded-2xl p-8 mb-12">
                     <h2 className="text-4xl font-bold mb-4 text-blue-400 border-l-4 border-blue-400 pl-6">
                         🚀 Assignment — Stark OS: Multi-Node Communication Test
@@ -2044,7 +2060,7 @@ from glob import glob`}</code>
                     <p className="text-2xl font-bold text-center text-blue-400">
                         Next week, StarkOS gets <em>serious</em>.
                     </p>
-                </section>
+                </section> 
 
             </div>
         </div>

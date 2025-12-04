@@ -8,7 +8,7 @@ import w6 from '../assets/week0_6.png';
 import w7 from '../assets/week0_7.png';
 import w8 from '../assets/week0_8.gif';
 
-
+import { useNavigate } from "react-router-dom";
 
 export default function Week0() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,6 +27,8 @@ export default function Week0() {
       setMenuOpen(false);
     }
   };
+
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
@@ -125,6 +127,7 @@ export default function Week0() {
         <div className="p-8 pt-20">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Week 0 Navigation</h3>
           <ul className="space-y-4">
+            <li><button onClick={() => navigate('/winteros')}className="text-lg hover:text-blue-400 transition-colors w-full text-left">❄️ WinterROS Home</button></li>
             <li>
               <button
                 onClick={() => scrollToSection('intro')}
@@ -847,7 +850,7 @@ sudo add-apt-repository universe # Click [ENTER] after running command`}</code>
           <pre className="mt-2 glass rounded-lg p-3 text-sm overflow-x-auto">
             <code>{`sudo apt update && sudo apt install curl -y
 export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\\" '{print $4}')
-curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/\\\${ROS_APT_SOURCE_VERSION}/ros2-apt-source_\\\${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo \\\${UBUNTU_CODENAME:-\\\${VERSION_CODENAME}})_all.deb"
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/\${ROS_APT_SOURCE_VERSION}/ros2-apt-source_\${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo \${UBUNTU_CODENAME:-\${VERSION_CODENAME}})_all.deb"
 sudo dpkg -i /tmp/ros2-apt-source.deb`}</code>
            </pre>
 
@@ -937,6 +940,28 @@ sudo apt install ros-jazzy-desktop`}</code>
           <p className="text-lg leading-relaxed text-center mb-4">
             Next week, we forge the mind inside it.
           </p>
+
+                    {/* Week 1 Link Section */}
+          <div className="mt-8 text-center">
+            <p className="text-xl font-semibold text-blue-300 mb-4">
+              ▶️ Initiate Next Sequence: Week 1 — StarkOS Foundations
+            </p>
+
+            <p className="text-lg text-gray-300 mb-6">
+              The cave terminal is running. Now it’s time to start building the <span className="text-yellow-300 font-semibold">brain</span> —
+              publishers, subscribers, nodes, and the communication grid that powers every Iron Man suit.
+              <br />
+              In Week 1, you begin crafting the <strong className="text-red-400">digital nervous system</strong> of StarkOS.
+            </p>
+
+            <a
+              href="/week1"   // <-- change to your actual route
+              className="glass px-10 py-4 rounded-full text-lg font-semibold text-yellow-300 border-2 border-yellow-300/40 transition-all duration-300 hover:bg-yellow-300/10 hover:border-yellow-300/70"
+            >
+              🚀 Enter Week 1: Building StarkOS Foundations
+            </a>
+          </div>
+
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <button

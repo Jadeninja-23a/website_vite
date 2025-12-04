@@ -195,7 +195,7 @@ export default function WinteROS() {
 
       {/* Hamburger Menu Button */}
       <div className="fixed top-28 right-10 z-50">
-        <div 
+        <div
           className={`hamburger ${menuOpen ? 'menu-open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
@@ -206,22 +206,21 @@ export default function WinteROS() {
       </div>
 
       {/* Side Menu */}
-      <div 
-        className={`fixed top-0 right-0 h-full w-80 glass-strong z-40 transition-transform duration-300 overflow-y-auto ${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 glass-strong z-40 transition-transform duration-300 overflow-y-auto ${menuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="p-8 pt-20">
           <h3 className="text-2xl font-bold mb-6 text-blue-400">Navigation</h3>
           <ul className="space-y-4">
-                        
+
             <li className="pt-4 border-t border-white/10">
               <p className="text-sm text-gray-400 mb-3 font-semibold">WORKSHOP WEEKS</p>
             </li>
-            
+
             {weeks.map(week => (
               <li key={week.week}>
-                <button 
+                <button
                   onClick={() => navigateToWeek(week.week)}
                   className="text-lg hover:text-blue-400 transition-colors w-full text-left flex items-center justify-between group"
                 >
@@ -230,9 +229,9 @@ export default function WinteROS() {
                 </button>
               </li>
             ))}
-            
+
             <li className="pt-4 border-t border-white/10">
-              <button 
+              <button
                 onClick={() => scrollToSection('cta')}
                 className="text-lg hover:text-blue-400 transition-colors w-full text-left"
               >
@@ -245,7 +244,7 @@ export default function WinteROS() {
 
       {/* Overlay */}
       {menuOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 z-30"
           onClick={() => setMenuOpen(false)}
         ></div>
@@ -256,13 +255,13 @@ export default function WinteROS() {
         <div className="max-w-6xl mx-auto">
           {/* Thumbnail Placeholder - Replace src with your image URL */}
           <div className="mb-8 flex justify-center">
-            <img 
+            <img
               src={backimg}
               alt="Iron Man Hammer"
               className="rounded-2xl max-w-2xl w-full h-auto border-2 border-blue-400/20"
             />
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-bold mb-4 text-blue-400">
             WinteROS<span className="text-white">_2025</span>
           </h1>
@@ -303,25 +302,25 @@ export default function WinteROS() {
 
         {/* Introduction */}
         <div className="glass-strong rounded-2xl p-10 mb-12">
-           <p className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-center tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-yellow-300 drop-shadow-md">
+          <p className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-center tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-white to-yellow-300 drop-shadow-md">
             Welcome to WinteROS.
           </p>
-          
+
           <p className="text-lg leading-relaxed mb-4">
-            Tony Stark was wounded - trapped in a cold, echoing cave, surrounded by enemies who demanded he build them a weapon.<br/>
+            Tony Stark was wounded - trapped in a cold, echoing cave, surrounded by enemies who demanded he build them a weapon.<br />
             Instead, he found scraps of metal, broken sensors, old circuits… and a battered laptop running Linux.
           </p>
 
-          
+
 
           <p className="text-lg leading-relaxed mb-4">
             On that laptop, one powerful framework was still installed: <strong className="text-blue-400">ROS2.</strong>
           </p>
 
           <p className="text-lg leading-relaxed mb-4">
-            To escape, Tony needed more than metal.<br/>
-            He needed intelligence.<br/>
-            He needed systems.<br/>
+            To escape, Tony needed more than metal.<br />
+            He needed intelligence.<br />
+            He needed systems.<br />
             He needed a machine that could <em>think</em>.
           </p>
 
@@ -330,18 +329,18 @@ export default function WinteROS() {
           </p>
 
           <p className="text-lg leading-relaxed">
-            Every week strengthens a new subsystem.<br/>
-            Every concept becomes part of the suit.<br/>
+            Every week strengthens a new subsystem.<br />
+            Every concept becomes part of the suit.<br />
             Every step takes Tony closer to breaking out of the cave.
           </p>
 
           <div className="flex justify-center">
-              <img
-                src={main1}
-                alt="Introduction placeholder"
-                className="rounded-xl w-80 h-auto border-2 border-blue-400/20"
-              />
-            </div>
+            <img
+              src={main1}
+              alt="Introduction placeholder"
+              className="rounded-xl w-80 h-auto border-2 border-blue-400/20"
+            />
+          </div>
         </div>
 
         <hr className="border-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent my-12" />
@@ -352,19 +351,19 @@ export default function WinteROS() {
             <span className="text-blue-400">❄️</span> The Cave
           </h2>
           <p className="text-xl leading-relaxed mb-4">
-            The walls rumble with distant machinery.<br/>
-            Tony lies on a cot, sparks flickering from scavenged wires.<br/>
-            He examines the scraps, the tools, the sensors.<br/>
+            The walls rumble with distant machinery.<br />
+            Tony lies on a cot, sparks flickering from scavenged wires.<br />
+            He examines the scraps, the tools, the sensors.<br />
             He knows one thing:
           </p>
 
           <p className="text-xl leading-relaxed mb-4">
-            If he wants to survive, he must build something smarter than a weapon -<br/>
+            If he wants to survive, he must build something smarter than a weapon -<br />
             he must build a machine capable of navigating, sensing, and acting on its own.
           </p>
 
           <p className="text-xl leading-relaxed">
-            This is where winteROS begins:<br/>
+            This is where winteROS begins:<br />
             with knowledge that becomes machinery.
           </p>
         </div>
@@ -375,23 +374,26 @@ export default function WinteROS() {
         {weeks.map((week, index) => (
           <div key={week.week} id={`week-${week.week}`} className="mb-12">
             <div className="glass rounded-2xl p-8 transition-all duration-400 hover:bg-white/[0.08]">
-              <h2 className="text-3xl font-bold mb-4 text-red-400 border-l-4 border-red-400 pl-6">
+              <h2
+                onClick={() => navigate(`/week${week.week}`)}
+                className="text-3xl font-bold mb-4 text-red-400 border-l-4 border-red-400 pl-6 cursor-pointer hover:text-red-300 transition-colors duration-300"
+              >
                 <span className="text-blue-400">❄️</span> Week {week.week} - {week.title}
               </h2>
-              
+
               {week.subtitle && week.subtitle !== week.title && (
                 <h3 className="text-xl font-semibold text-yellow-300 mb-4 pl-6">{week.subtitle}</h3>
               )}
-              
+
               <div className="pl-6">
                 <p className="text-lg leading-relaxed mb-4">{week.description}</p>
-                
+
                 {week.highlight && (
                   <p className="text-lg leading-relaxed mb-4">
                     <strong className="text-yellow-300">{week.highlight}</strong>
                   </p>
                 )}
-                
+
                 {week.listItems && (
                   <ul className="list-none pl-6 mb-4 space-y-2">
                     {week.listItems.map((item, i) => (
@@ -401,15 +403,15 @@ export default function WinteROS() {
                     ))}
                   </ul>
                 )}
-                
+
                 <p className="text-base leading-relaxed mb-4 text-gray-300">{week.details}</p>
-                
+
                 <p className="text-lg leading-relaxed mb-6">{week.conclusion}</p>
               </div>
 
               {/* Image Placeholder - Replace src with your image URL */}
               <div className="flex justify-center">
-                <img 
+                <img
                   src={weekImages[week.week]}
                   alt={week.imagePlaceholder}
                   className="rounded-xl w-100 h-auto border-2 border-blue-400/20"
@@ -435,15 +437,15 @@ export default function WinteROS() {
           <p className="text-2xl font-bold text-blue-400 mb-8">
             The escape begins now.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             {/* <button className="glass px-10 py-4 rounded-full text-lg font-semibold text-blue-400 border-2 border-blue-400/30 transition-all duration-300 hover:bg-blue-400/10 hover:border-blue-400/60">
               Jump to Week 0
             </button> */}
-            <button 
+            <button
               onClick={() => navigate('/week0')}
               className="glass px-10 py-4 rounded-full text-lg font-semibold text-red-400 border-2 border-red-400/30 transition-all duration-300 hover:bg-red-400/10 hover:border-red-400/60"
-              >
+            >
               Start Initialization Sequence
             </button>
           </div>

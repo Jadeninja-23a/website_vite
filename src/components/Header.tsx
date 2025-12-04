@@ -65,7 +65,7 @@ const Header = () => {
               className="px-4 py-2 bg-blue-600 hover:bg-cyan-500 rounded-md transition-colors font-heading"
               onClick={() => setIsMenuOpen(false)}
             >
-              ❄️ WinterROS
+              ❄️ WinteROS
             </Link>
 
             <Link

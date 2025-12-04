@@ -34,6 +34,7 @@ function App() {
             <Route path="/legacy" element={<LegacyPage />} />
             <Route path="/certificates" element={<CertificatePortal />} />
             <Route path="/xlr8" element={<XLR8Page />} />
+            <Route path="/winteROS" element={<Winteros />} />
 
             {/* ⬇️ NEW ROUTE */}
             <Route path="/winteros" element={<Winteros />} />

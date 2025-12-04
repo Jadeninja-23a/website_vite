@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Award } from 'lucide-react';
 import Cont from '../assets/ctbc banner.png';
 import Xlr8Img from '../assets/XLR8card.png';
+import ros from '../assets/winterosimg.jpeg';
 
 const eventsData = [
   {
@@ -58,7 +59,107 @@ const Events = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
           {/* Featured Event */}
+          {/* Featured Winter Bootcamp - WinteROS */}
+          <div className="col-span-1 lg:col-span-2 bg-gradient-to-br from-sky-900/40 via-slate-900/60 to-indigo-900/40 rounded-xl overflow-hidden border border-cyan-400/30 relative">
+            {/* Snowflakes Animation */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {[...Array(20)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute text-cyan-200/30 animate-fall"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 5}s`,
+                    animationDuration: `${5 + Math.random() * 10}s`,
+                    fontSize: `${10 + Math.random() * 10}px`,
+                  }}
+                >
+                  ❄
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col md:flex-row relative z-10">
+              
+              {/* Text side */}
+              <div className="md:w-1/2 p-8">
+                <div className="inline-flex items-center mb-4 px-3 py-1 bg-cyan-400/20 border border-cyan-400/50 rounded-full backdrop-blur-sm shadow-lg shadow-cyan-500/20">
+                  <Award size={16} className="text-cyan-300 mr-2" />
+                  <span className="text-sm text-cyan-100 font-semibold">❄ Winter ROS Bootcamp</span>
+                </div>
+
+                <h3 className="text-3xl font-bold mb-3 font-heading bg-gradient-to-r from-cyan-200 via-blue-200 to-purple-200 bg-clip-text text-transparent">
+                  WinteROS 2025
+                </h3>
+
+                <div className="flex items-center text-gray-200 mb-2">
+                  <Calendar size={16} className="mr-2 text-cyan-400" />
+                  <span>December 2025 </span>
+                </div>
+
+                <div className="flex items-center text-gray-200 mb-2">
+                  <Clock size={16} className="mr-2 text-cyan-400" />
+                  <span>5 Weeks </span>
+                </div>
+
+                <div className="flex items-center text-gray-200 mb-4">
+                  <MapPin size={16} className="mr-2 text-cyan-400" />
+                  <span>Online</span>
+                </div>
+
+                <p className="text-gray-200 mb-6 leading-relaxed">
+                  WinteROS is ERC’s flagship <span className="font-semibold text-cyan-300">winter ROS bootcamp</span> — 
+                  a focused program designed to introduce students to modern autonomous robotics. Over four intensive weeks, 
+                  participants progress from ROS2 fundamentals to developing a fully simulated robot capable of 
+                  <span className="font-semibold text-cyan-300">SLAM, autonomous navigation, object detection using OpenCV, and payload retrieval in Gazebo</span>. 
+                  The curriculum covers core robotics concepts including nodes, topics, services, actions, parameters, 
+                  sensor integration, navigation planning, and manipulation. By the end of the bootcamp, students gain 
+                  a strong practical foundation in ROS2 and simulation tooling — empowering them to build intelligent, 
+                  mission-ready robotic systems.
+                </p>
+
+                <button
+                  onClick={() => navigate('/winteros')}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-md transition-all inline-flex items-center shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 font-semibold"
+                >
+                  WinteROS Home
+                  <ArrowRight size={16} className="ml-2" />
+                </button>
+              </div>
+
+              {/* Image side */}
+              <div className="md:w-1/2 h-64 md:h-auto relative">
+                <img
+                  src={ros}
+                  alt="WinteROS 2025"
+                  className="w-full h-full object-cover brightness-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/50 via-cyan-900/20 to-cyan-400/20 pointer-events-none" />
+                {/* Frost effect overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-cyan-500/10 pointer-events-none" />
+              </div>
+            </div>
+
+            <style jsx>{`
+              @keyframes fall {
+                0% {
+                  transform: translateY(-10vh) rotate(0deg);
+                  opacity: 1;
+                }
+                100% {
+                  transform: translateY(110vh) rotate(360deg);
+                  opacity: 0.3;
+                }
+              }
+              .animate-fall {
+                animation: fall linear infinite;
+              }
+            `}</style>
+          </div>
+
+
           <div className="col-span-1 lg:col-span-2 bg-gradient-to-br from-blue-900/30 to-orange-900/30 rounded-xl overflow-hidden border border-blue-500/20">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-8">
@@ -107,6 +208,10 @@ const Events = () => {
               </div>
             </div>
           </div>
+
+      
+
+
 
           {/* Event Cards */}
           {eventsData.map((event) => (

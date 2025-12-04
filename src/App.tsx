@@ -1,3 +1,4 @@
+// App.tsx
 import React from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -10,8 +11,10 @@ import Team from './components/Team';
 import Resources from './components/Resources';
 import Contact from './components/Contact';
 import LegacyPage from './components/LegacyPage';
-import BlogViewer  from './components/BlogViewer.tsx';
-import CertificatePortal from './components/CertificatePortal.tsx'
+import BlogViewer from './components/BlogViewer.tsx';
+import CertificatePortal from './components/CertificatePortal.tsx';
+import Winteros from './components/Winteros';
+import Week0 from './components/week0';
 
 function App() {
   return (
@@ -29,7 +32,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/legacy" element={<LegacyPage />} />
             <Route path="/certificates" element={<CertificatePortal />} />
-            <Route path="/xlr8" element={<XLR8Page />} /> 
+            <Route path="/xlr8" element={<XLR8Page />} />
+
+            {/* ⬇️ NEW ROUTE */}
+            <Route path="/winteros" element={<Winteros />} />
+            <Route path="/week0" element={<Week0 />} />
           </Routes>
         </main>
         <Footer />

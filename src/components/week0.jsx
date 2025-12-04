@@ -207,21 +207,6 @@ export default function Week0() {
               className="rounded-2xl max-w-2xl w-full h-auto border-2 border-blue-400/20"
             />
           </div> */}
-          {/* Back Button */}
-                <button
-                    onClick={() => navigate('/winteros')}
-                    className="absolute top-30 left-8 flex items-center gap-3 px-6 py-3 glass rounded-xl hover:bg-white/20 hover:scale-105 transition-all duration-300 group text-lg font-semibold shadow-lg"
-                >
-                    <svg
-                        className="w-6 h-6 transform group-hover:-translate-x-2 transition-transform duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    <span>Back to WinterROS Home</span>
-                </button>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-4 text-blue-400">
             Week 0<span className="text-white"> — Initialization Sequence</span>

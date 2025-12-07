@@ -943,7 +943,7 @@ colcon build`}</code>
                         To see the data being published on a topic, use:
                     </p>
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-4">
-                        <code>{`ros2 topic info &lt;topic_name&gt;`}</code>
+                        <code>{`ros2 topic info <topic_name>`}</code>
                     </pre>
                     <p className="text-lg leading-relaxed mb-3">
                         Since we know that <code>/teleop_turtle</code> publishes data to <code>/turtlesim</code> over the <code>/turtle1/cmd_vel</code> topic, let's use <code>echo</code> to introspect that topic:
@@ -1122,7 +1122,7 @@ Vector3  angular
                     </p>
 
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-3">
-                        <code>{`ros2 service type &lt;service_name&gt;`}</code>
+                        <code>{`ros2 service type <service_name>`}</code>
                     </pre>
 
                     <p className="text-lg leading-relaxed mb-3">
@@ -1166,7 +1166,7 @@ Vector3  angular
                     </p>
 
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-3">
-                        <code>{`ros2 service info &lt;service_name&gt;`}</code>
+                        <code>{`ros2 service info <service_name>`}</code>
                     </pre>
 
                     <p className="text-lg leading-relaxed mb-4">
@@ -1851,17 +1851,18 @@ code .`}</code>
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-4">
                         <code>{`from launch import LaunchDescription
 from launch_ros.actions import Node
+
 def generate_launch_description():
-return LaunchDescription([
-Node(
-package='week1_tutorials',
-executable='publisher',
-),
-Node(
-package='week1_tutorials',
-executable='subscriber',
-),
-])`}</code>
+    return LaunchDescription([
+        Node(
+            package='week1_tutorials',
+            executable='publisher',
+        ),
+        Node(
+            package='week1_tutorials',
+            executable='subscriber',
+        ),
+    ])`}</code>
                     </pre>
                     <p className="text-lg leading-relaxed mb-4">
                         <code>package</code> refers to the name of the package from which you are running the executable<br />
@@ -1891,10 +1892,10 @@ code .`}</code></pre>
 
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-4">
                         <code>{`data_files=[
-('share/ament_index/resource_index/packages',
-    ['resource/' + package_name]),
-('share/' + package_name, ['package.xml']),
-(os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', 'pubsub.launch.py'))),
+    ('share/ament_index/resource_index/packages',
+        ['resource/' + package_name]),
+    ('share/' + package_name, ['package.xml']),
+    (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', 'pubsub.launch.py'))),
 ],`}</code>
                     </pre>
 

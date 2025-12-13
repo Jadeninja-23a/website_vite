@@ -48,7 +48,7 @@ export default function WinteROS() {
       4: '/week4',  // Change to your actual Week 4 URL
       5: '/week5'   // Change to your actual Week 5 URL
     };
-    window.location.href = weekUrls[weekNum];
+    navigate(weekUrls[weekNum]);
   };
 
   const weeks = [

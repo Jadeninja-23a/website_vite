@@ -157,7 +157,7 @@ export default function Week2Part2() {
                     <h3 className="text-2xl font-bold mb-6 text-blue-400">Week 2 Part 2 Navigation</h3>
                     <ul className="space-y-4">
                         <li><button onClick={() => navigate('/winteros')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">❄️ WinterROS Home</button></li>
-                        <li><button onClick={() => navigate('/week2-part1')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">← Back to Part 1</button></li>
+                        <li><button onClick={() => navigate('/week2p1')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">← Back to Part 1</button></li>
                         <li className="pt-2 border-t border-white/10"></li>
                         <li><button onClick={() => scrollToSection('week2-part2-intro')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">🎯 Introduction</button></li>
                         <li><button onClick={() => scrollToSection('download-package')} className="text-lg hover:text-blue-400 transition-colors w-full text-left">📦 Download Package</button></li>

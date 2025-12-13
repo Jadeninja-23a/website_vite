@@ -193,7 +193,7 @@ export default function Week2Part1() {
                         {/* Navigation to Part 2 */}
                         <li className="pt-4 border-t border-white/10">
                             <button
-                                onClick={() => navigate('/week2-part2')}
+                                onClick={() => navigate('/week2p2')}
                                 className="text-lg font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 w-full text-left px-4 py-3 rounded-lg flex items-center justify-between group"
                             >
                                 <span>Continue to Part 2</span>
@@ -233,7 +233,7 @@ export default function Week2Part1() {
             {/* Add a floating navigation button at the bottom right corner */}
             <div className="fixed bottom-8 right-8 z-50">
                 <button
-                    onClick={() => navigate('/week2-part2')}
+                    onClick={() => navigate('/week2p2')}
                     className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 rounded-full transition-all duration-300 transform hover:scale-105 text-base font-bold shadow-lg flex items-center gap-2 group"
                 >
                     <span>Next: Part 2</span>
@@ -2165,7 +2165,7 @@ if __name__ == '__main__':
 
                     <div className="flex justify-center">
                         <button
-                            onClick={() => navigate('/week2-part2')}
+                            onClick={() => navigate('/week2p2')}
                             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 rounded-xl transition-all duration-300 transform hover:scale-105 text-xl font-bold shadow-lg"
                         >
                             Continue to Part 2 →

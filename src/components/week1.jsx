@@ -2063,7 +2063,7 @@ from glob import glob`}</code>
                     </p>
 
                     <a
-                        href="/week2"   // adjust route if needed
+                        href="/week2p1"   // adjust route if needed
                         className="glass px-10 py-4 rounded-full text-lg font-semibold text-yellow-300 border-2 border-yellow-300/40 transition-all duration-300 hover:bg-yellow-300/10 hover:border-yellow-300/70"
                     >
                         🧪 Enter Week 2: Gazebo & Simulation

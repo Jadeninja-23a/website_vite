@@ -42,8 +42,8 @@ function App() {
             <Route path="/winteros" element={<Winteros />} />
             <Route path="/week0" element={<Week0 />} />
             <Route path="/week1" element={<Week1 />} />
-            <Route path="/week2" element={<Week2Part1 />} />
-            <Route path="/week2-part2" element={<Week2Part2 />} />
+            <Route path="/week2p1" element={<Week2Part1 />} />
+            <Route path="/week2p2" element={<Week2Part2 />} />
           </Routes>
         </main>
         <Footer />

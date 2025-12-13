@@ -43,7 +43,7 @@ export default function WinteROS() {
     const weekUrls = {
       0: '/week0',  // Change to your actual Week 0 URL
       1: '/week1',  // Change to your actual Week 1 URL
-      2: '/week2',  // Change to your actual Week 2 URL
+      2: '/week2p1',  // Change to your actual Week 2 URL
       3: '/week3',  // Change to your actual Week 3 URL
       4: '/week4',  // Change to your actual Week 4 URL
       5: '/week5'   // Change to your actual Week 5 URL
@@ -375,7 +375,7 @@ export default function WinteROS() {
           <div key={week.week} id={`week-${week.week}`} className="mb-12">
             <div className="glass rounded-2xl p-8 transition-all duration-400 hover:bg-white/[0.08]">
               <h2
-                onClick={() => navigate(`/week${week.week}`)}
+                onClick={() => navigateToWeek(week.week)}
                 className="text-3xl font-bold mb-4 text-red-400 border-l-4 border-red-400 pl-6 cursor-pointer hover:text-red-300 transition-colors duration-300"
               >
                 <span className="text-blue-400">❄️</span> Week {week.week} - {week.title}

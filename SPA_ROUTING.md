@@ -13,7 +13,9 @@ Automatically redirects all routes to `index.html` when deployed to Vercel.
 The `_redirects` file in the `public/` folder is copied to the build output and tells Netlify to serve `index.html` for all routes.
 
 ### 3. GitHub Pages
-If deploying to GitHub Pages, you may need a custom 404 handling solution or use the HashRouter instead of BrowserRouter.
+GitHub Pages doesn't support server-side redirects for SPAs. You have two options:
+- **Option A**: Use HashRouter instead of BrowserRouter (URLs will have `#` like `/#/week2`)
+- **Option B**: Create a `404.html` file that redirects to `index.html` (search for "SPA GitHub Pages 404 trick")
 
 ### 4. Apache Servers (`.htaccess`)
 For Apache servers, add an `.htaccess` file with appropriate rewrite rules.

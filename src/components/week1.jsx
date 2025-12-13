@@ -2047,7 +2047,29 @@ from glob import glob`}</code>
                         Next week, StarkOS gets <em>serious</em>.
                     </p>
                 </section>
+                        
+                {/* Week 2 Link Section */}
+                <section id="week2-link" className="glass-strong rounded-2xl p-8 mb-12">
+                <div className="mt-8 text-center">
+                    <p className="text-xl font-semibold text-blue-300 mb-4">
+                        ▶️ Initiate Next Sequence: Week 2 — Simulating StarkOS Environments
+                    </p>
 
+                    <p className="text-lg text-gray-300 mb-6">
+                        This is where ideas meet physics.
+                        <br />
+                        In Week 2, you step into the virtual testing lab — using <strong className="text-yellow-300">Gazebo</strong> to
+                        simulate environments, motion, and robot behavior safely before deployment.
+                    </p>
+
+                    <a
+                        href="/week2"   // adjust route if needed
+                        className="glass px-10 py-4 rounded-full text-lg font-semibold text-yellow-300 border-2 border-yellow-300/40 transition-all duration-300 hover:bg-yellow-300/10 hover:border-yellow-300/70"
+                    >
+                        🧪 Enter Week 2: Gazebo & Simulation
+                    </a>
+                </div>
+                </section>
             </div>
         </div>
     );

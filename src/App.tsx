@@ -15,7 +15,9 @@ import BlogViewer from './components/BlogViewer.tsx';
 import CertificatePortal from './components/CertificatePortal.tsx';
 import Winteros from './components/Winteros';
 import Week0 from './components/week0';
-import Week1 from './components/week1'; 
+import Week1 from './components/week1';
+import Week2Part1 from './components/week2p1.jsx'; 
+import Week2Part2 from './components/week2p2.jsx';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
             <Route path="/winteros" element={<Winteros />} />
             <Route path="/week0" element={<Week0 />} />
             <Route path="/week1" element={<Week1 />} />
+            <Route path="/week2" element={<Week2Part1 />} />
+            <Route path="/week2-part2" element={<Week2Part2 />} />
           </Routes>
         </main>
         <Footer />

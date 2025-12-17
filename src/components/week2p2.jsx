@@ -1301,6 +1301,18 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                     <div className="mb-8">
                         <h3 className="text-3xl font-bold mb-6 text-blue-300">🚀 Running the Assignment</h3>
 
+                        <div className="bg-yellow-500/10 border-l-4 border-yellow-400 p-6 mb-6 rounded">
+                            <p className="text-lg leading-relaxed font-semibold mb-2">
+                                ⚠️ Don't forget to build the <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">assgn</code> package and source <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">install/setup.bash</code>!
+                            </p>
+                            <div className="bg-gray-900 rounded-lg p-4 mt-4 border border-gray-700">
+                                <code className="text-green-400">colcon build</code>
+                            </div>
+                            <div className="bg-gray-900 rounded-lg p-4 mt-2 border border-gray-700">
+                                <code className="text-green-400">source install/setup.bash</code>
+                            </div>
+                        </div>
+                        
                         <p className="text-lg leading-relaxed mb-4">
                             Launch the simulation:
                         </p>

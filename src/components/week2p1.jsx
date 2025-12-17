@@ -27,7 +27,7 @@ import w16 from '../assets/week2_p1_16.jpg';
 import w17 from '../assets/week2_p1_17.jpg';
 import w18 from '../assets/week2_p1_18.jpg';
 import w19 from '../assets/week2_p1_19.jpg';
-import dumeBotUrdf from '../assets/downloads/dume_bot.urdf?url';
+import dumeBotUrdf from '/downloads/dume_bot.urdf?url';
 export default function Week2Part1() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrollY, setScrollY] = useState(0);

@@ -1070,7 +1070,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/Assgn.launch.py';
+                                            link.href = '/downloads/Assgn.launch.py';
                                             link.download = 'Assgn.launch.py';
                                             link.click();
                                         }}
@@ -1082,7 +1082,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/world.launch.py';
+                                            link.href = '/downloads/world.launch.py';
                                             link.download = 'world.launch.py';
                                             link.click();
                                         }}
@@ -1100,7 +1100,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/rviz.rviz';
+                                            link.href = '/downloads/rviz.rviz';
                                             link.download = 'rviz.rviz';
                                             link.click();
                                         }}
@@ -1118,7 +1118,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/erc_bot.gazebo';
+                                            link.href = '/downloads/erc_bot.gazebo';
                                             link.download = 'erc_bot.gazebo';
                                             link.click();
                                         }}
@@ -1130,7 +1130,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/IronRover.urdf';
+                                            link.href = '/downloads/IronRover.urdf';
                                             link.download = 'IronRover.urdf';
                                             link.click();
                                         }}
@@ -1142,7 +1142,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/materials.xacro';
+                                            link.href = '/downloads/materials.xacro';
                                             link.download = 'materials.xacro';
                                             link.click();
                                         }}
@@ -1160,7 +1160,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/IronMan_ROS_Body.dae';
+                                            link.href = '/downloads/IronMan_ROS_Body.dae';
                                             link.download = 'IronMan_ROS_Body.dae';
                                             link.click();
                                         }}
@@ -1172,7 +1172,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/IronManWheelLeftFront.dae';
+                                            link.href = '/downloads/IronManWheelLeftFront.dae';
                                             link.download = 'IronManWheelLeftFront.dae';
                                             link.click();
                                         }}
@@ -1184,7 +1184,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/IronManWheelRightFront.dae';
+                                            link.href = '/downloads/IronManWheelRightFront.dae';
                                             link.download = 'IronManWheelRightFront.dae';
                                             link.click();
                                         }}
@@ -1196,7 +1196,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/lidar.dae';
+                                            link.href = '/downloads/lidar.dae';
                                             link.download = 'lidar.dae';
                                             link.click();
                                         }}
@@ -1214,7 +1214,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                     <button
                                         onClick={() => {
                                             const link = document.createElement('a');
-                                            link.href = '../assets/downloads/IronManCave.sdf';
+                                            link.href = '/downloads/IronManCave.sdf';
                                             link.download = 'IronManCave.sdf';
                                             link.click();
                                         }}
@@ -1261,7 +1261,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                 <button
                                     onClick={() => {
                                         const link = document.createElement('a');
-                                        link.href = '../assets/downloads/tonystarklogic.py';
+                                        link.href = '/downloads/tonystarklogic.py';
                                         link.download = 'tonystarklogic.py';
                                         link.click();
                                     }}

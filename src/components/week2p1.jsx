@@ -27,7 +27,7 @@ import w16 from '../assets/week2_p1_16.jpg';
 import w17 from '../assets/week2_p1_17.jpg';
 import w18 from '../assets/week2_p1_18.jpg';
 import w19 from '../assets/week2_p1_19.jpg';
-import dumeBotUrdf from '../assets/dume_bot.urdf?url';
+import dumeBotUrdf from '../assets/downloads/dume_bot.urdf?url';
 export default function Week2Part1() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrollY, setScrollY] = useState(0);
@@ -538,20 +538,23 @@ export default function Week2Part1() {
                     <pre className="glass rounded-lg p-4 text-sm overflow-x-auto mb-4">
                         <code>{`.
 ├── CMakeLists.txt
-├── package.xml
+├── launch
+│   └── world.launch.py
 ├── meshes
-│   ├── mecanum_wheel_left.STL
-│   ├── mecanum_wheel_right.STL
-│   ├── wheel.blend
-│   ├── wheel.dae
-│   ├── wheel.SLDPRT
-│   ├── wheel.STEP
-│   └── wheel.STL
+│   ├── IronMan_ROS_Body.dae
+│   ├── IronManWheelLeftFront.dae
+│   ├── IronManWheelRightFront.dae
+│   ├── wheel.blend
+│   ├── wheel.dae
+│   ├── wheel.SLDPRT
+│   ├── wheel.STEP
+│   └── wheel.STL
+├── package.xml
 ├── rviz
-│   ├── rviz.rviz
-│   └── urdf.rviz
+│   ├── rviz.rviz
+│   └── urdf.rviz
 ├── urdf
-│   └──materials.xacro
+│   └── materials.xacro
 └── worlds
     ├── empty.sdf
     └── world.sdf`}</code>

@@ -6,6 +6,7 @@ import g1 from '../assets/week2_p2_g1.gif'
 import g2 from '../assets/week2_p2_g2.gif'
 import g3 from '../assets/week2_p2_g3.gif'
 import g4 from '../assets/week2_p2_g4.gif'
+import g5 from '../assets/week2_p2_g5.gif'
 
 import w1 from '../assets/week2_p2_1.png'
 import w2 from '../assets/week2_p2_2.png'
@@ -539,7 +540,7 @@ export default function Week2Part2() {
                     </div>
                 </section>
 
-               {/* Image Transport Section - CONTINUATION */}
+                {/* Image Transport Section - CONTINUATION */}
                 <section id="image-transport" className="glass-strong rounded-2xl p-8 mb-12">
                     <h2 className="text-4xl font-bold mb-4 text-blue-400 border-l-4 border-blue-400 pl-6">
                         Image Transport
@@ -977,40 +978,370 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                 {/* Assignment Section */}
                 <section id="assignment" className="glass-strong rounded-2xl p-8 mb-12">
                     <h2 className="text-4xl font-bold mb-4 text-blue-400 border-l-4 border-blue-400 pl-6">
-                        Assignment
+                        🧠 Week 2 Assignment — Autonomous Stark Rover
                     </h2>
 
                     <div className="mb-6 flex justify-center">
                         <img
                             src={g4}
-                            alt="Assignment Coming Soon"
+                            alt="One More Assignment"
                             className="rounded-xl w-full max-w-5xl h-auto border-2 border-blue-400/20"
                         />
                     </div>
 
-                    <p className="text-lg leading-relaxed mb-6 text-center italic">
-                        "Tony Stark's eating now. He will give you the assignment later."
-                    </p>
+                    <div className="space-y-6 mb-8">
+                        <div className="text-center">
+                            <h3 className="text-2xl font-bold mb-4 text-gray-300">One More Assignment ☹️</h3>
+                            <p className="text-lg leading-relaxed mb-4">
+                                Yeah… we know.<br />
+                                That look? That's exactly how Tony Stark feels when FRIDAY says <span className="italic text-blue-300">"one more test run."</span>
+                            </p>
+                            <p className="text-lg leading-relaxed mb-4">
+                                But hear us out — this one's actually <span className="font-bold text-blue-400">fun</span>.
+                            </p>
+                            <p className="text-lg leading-relaxed mb-4">
+                                You're not just wiring things up anymore.<br />
+                                Your robot can <span className="font-semibold text-green-400">see</span>, <span className="font-semibold text-yellow-400">sense</span>, and now it's time to let it <span className="font-semibold text-purple-400">think a little</span>.
+                            </p>
+                            <p className="text-lg leading-relaxed mb-4">
+                                This assignment is about giving your Iron Rover a bit of autonomy —<br />
+                                no manual driving, no babysitting — just logic, sensors, and motion working together.
+                            </p>
+                            <p className="text-lg leading-relaxed italic">
+                                Roll your eyes if you want.<br />
+                                Then open the terminal and let's make it move.
+                            </p>
+                        </div>
 
-                    <p className="text-lg leading-relaxed mb-4 text-center text-xl font-semibold">
-                        Your robot can now see and sense the world around it.
-                    </p>
+                        <div className="bg-blue-500/10 border-l-4 border-blue-400 p-6 rounded">
+                            <p className="text-lg leading-relaxed mb-4">
+                                In this assignment, you will deploy an autonomous Iron-Man-themed rover inside a simulated cave and make it:
+                            </p>
+                            <ul className="list-disc list-inside space-y-2 text-lg ml-6">
+                                <li>avoid obstacles using LiDAR</li>
+                                <li>explore the environment on its own</li>
+                                <li>move without teleoperation</li>
+                            </ul>
+                            <p className="text-lg leading-relaxed mt-4 italic">
+                                Think of this as Stark switching from <span className="text-yellow-300">manual test mode</span> to <span className="text-green-300">autonomous assist</span>.
+                            </p>
+                        </div>
+                    </div>
 
-                    <p className="text-lg leading-relaxed mb-4 text-center text-xl font-semibold">
-                        An assignment that puts this perception to the test is coming soon.
-                    </p>
+                    <div className="mb-8">
+                        <h3 className="text-3xl font-bold mb-6 text-blue-300">📦 Package Setup</h3>
 
-                    <div className="bg-yellow-500/10 border-l-4 border-yellow-400 p-6 mt-6 rounded">
-                        <h3 className="text-2xl font-semibold mb-3 text-yellow-300">Stay Tuned</h3>
-                        <p className="text-lg leading-relaxed">
-                            The next challenge will test your understanding of sensor integration and data visualization. Make sure your robot's sensors are functioning correctly and you're comfortable with the ROS 2 bridge configuration.
+                        <p className="text-lg leading-relaxed mb-4">
+                            Create a new ROS 2 package named:
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-4 mb-6 border border-gray-700">
+                            <code className="text-green-400">assgn</code>
+                        </div>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            Inside the package, create the following folders(dont remove any preexisting files):
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-6 mb-6 border border-gray-700 overflow-x-auto">
+                            <pre className="text-green-400 text-sm">
+                                {`assgn/
+├── launch/
+├── rviz/
+├── models/
+├── meshes/
+├── worlds/
+└── assgn/`}
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div className="mb-8">
+                        <h3 className="text-3xl font-bold mb-6 text-blue-300">📥 Download & Place Files</h3>
+
+                        <p className="text-lg leading-relaxed mb-6">
+                            Download and place the files into your package folders as follows:
+                        </p>
+
+                        <div className="space-y-4">
+                            <div className="bg-purple-500/10 border-l-4 border-purple-400 p-4 rounded">
+                                <p className="text-lg mb-3">
+                                    Download{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/Assgn.launch.py';
+                                            link.download = 'Assgn.launch.py';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        Assgn.launch.py
+                                    </button>{' '}
+                                    and{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/world.launch.py';
+                                            link.download = 'world.launch.py';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        world.launch.py
+                                    </button>{' '}
+                                    into the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">launch/</code> folder.
+                                </p>
+                            </div>
+
+                            <div className="bg-purple-500/10 border-l-4 border-purple-400 p-4 rounded">
+                                <p className="text-lg mb-3">
+                                    Download{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/rviz.rviz';
+                                            link.download = 'rviz.rviz';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        rviz.rviz
+                                    </button>{' '}
+                                    into the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">rviz/</code> folder.
+                                </p>
+                            </div>
+
+                            <div className="bg-purple-500/10 border-l-4 border-purple-400 p-4 rounded">
+                                <p className="text-lg mb-3">
+                                    Download{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/erc_bot.gazebo';
+                                            link.download = 'erc_bot.gazebo';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        erc_bot.gazebo
+                                    </button>
+                                    ,{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/IronRover.urdf';
+                                            link.download = 'IronRover.urdf';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        IronRover.urdf
+                                    </button>
+                                    , and{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/materials.xacro';
+                                            link.download = 'materials.xacro';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        materials.xacro
+                                    </button>{' '}
+                                    into the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">models/</code> folder.
+                                </p>
+                            </div>
+
+                            <div className="bg-purple-500/10 border-l-4 border-purple-400 p-4 rounded">
+                                <p className="text-lg mb-3">
+                                    Download the mesh files{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/IronMan_ROS_Body.dae';
+                                            link.download = 'IronMan_ROS_Body.dae';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        IronMan_ROS_Body.dae
+                                    </button>
+                                    ,{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/IronManWheelLeftFront.dae';
+                                            link.download = 'IronManWheelLeftFront.dae';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        IronManWheelLeftFront.dae
+                                    </button>
+                                    ,{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/IronManWheelRightFront.dae';
+                                            link.download = 'IronManWheelRightFront.dae';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        IronManWheelRightFront.dae
+                                    </button>
+                                    , and{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/lidar.dae';
+                                            link.download = 'lidar.dae';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        lidar.dae
+                                    </button>{' '}
+                                    into the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">meshes/</code> folder.
+                                </p>
+                            </div>
+
+                            <div className="bg-purple-500/10 border-l-4 border-purple-400 p-4 rounded">
+                                <p className="text-lg mb-3">
+                                    Download{' '}
+                                    <button
+                                        onClick={() => {
+                                            const link = document.createElement('a');
+                                            link.href = '../assets/downloads/IronManCave.sdf';
+                                            link.download = 'IronManCave.sdf';
+                                            link.click();
+                                        }}
+                                        className="text-blue-400 hover:text-blue-300 underline cursor-pointer bg-transparent border-none p-0 font-inherit font-semibold"
+                                    >
+                                        IronManCave.sdf
+                                    </button>{' '}
+                                    into the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">worlds/</code> folder.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mb-8">
+                        <h3 className="text-3xl font-bold mb-6 text-blue-300">Autonomous Logic Node</h3>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            Inside the <code className="bg-gray-800 px-2 py-1 rounded text-green-300">assgn/</code> folder create the following file:
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-4 mb-6 border border-gray-700">
+                            <code className="text-green-400">tonystarklogic.py</code>
+                        </div>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            This node will:
+                        </p>
+
+                        <ul className="list-disc list-inside space-y-2 text-lg ml-6 mb-6">
+                            <li>subscribe to LiDAR data</li>
+                            <li>process obstacle distances</li>
+                            <li>publish cmd_vel</li>
+                            <li>enable autonomous exploration and obstacle avoidance</li>
+                        </ul>
+
+                        <div className="bg-yellow-500/10 border-l-4 border-yellow-400 p-6 rounded mb-6">
+                            <p className="text-lg leading-relaxed mb-2 font-semibold">
+                                You do not need to write everything from scratch.
+                            </p>
+                            <p className="text-lg leading-relaxed mb-4">
+                                A template file is provided with missing parts. Read the code carefully, understand what each block does, and fill in the blanks.
+                            </p>
+                            <div className="text-center">
+                                <button
+                                    onClick={() => {
+                                        const link = document.createElement('a');
+                                        link.href = '../assets/downloads/tonystarklogic.py';
+                                        link.download = 'tonystarklogic.py';
+                                        link.click();
+                                    }}
+                                    className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 border-none cursor-pointer"
+                                >
+                                    📥 Download tonystarklogic.py Template
+                                </button>
+                            </div>
+                        </div>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            After making the <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">tonystarklogic.py</code>, run command:
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-4 mb-4 border border-gray-700">
+                            <code className="text-green-400">chmod +x tonystarklogic.py</code>
+                        </div>
+
+                        <p className="text-lg leading-relaxed italic">
+                            So it can become executable.
                         </p>
                     </div>
+
+                    <div className="bg-red-500/10 border-l-4 border-red-400 p-6 mt-6 rounded">
+                        <h4 className="text-2xl font-semibold mb-3 text-red-300">⚠️ Important: Update setup.py</h4>
+                        <p className="text-lg leading-relaxed mb-4">
+                            Remember, you need to change the <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">setup.py</code> file according to what files and executables you're adding to the package.
+                        </p>
+                        <p className="text-lg leading-relaxed font-semibold">
+                            Remember to update <code className="bg-gray-800 px-2 py-1 rounded text-yellow-300">setup.py</code> accordingly!
+                        </p>
+                        <p className="text-lg leading-relaxed mt-3 italic text-gray-300">
+                            Hint: Look into <span className="text-blue-300 font-semibold">data_files</span> and <span className="text-blue-300 font-semibold">entry_points</span> sections.
+                        </p>
+                    </div>
+
+                    <div className="mb-8">
+                        <h3 className="text-3xl font-bold mb-6 text-blue-300">🚀 Running the Assignment</h3>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            Launch the simulation:
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-4 mb-6 border border-gray-700">
+                            <code className="text-green-400">ros2 launch assgn Assgn.launch.py</code>
+                        </div>
+
+                        <p className="text-lg leading-relaxed mb-4">
+                            and then run your logic:
+                        </p>
+
+                        <div className="bg-gray-900 rounded-lg p-4 mb-6 border border-gray-700">
+                            <code className="text-green-400">ros2 run assgn tonystarklogic</code>
+                        </div>
+                    </div>
+
+                    <div className="bg-green-500/10 border-l-4 border-green-400 p-6 mb-8 rounded">
+                        <h4 className="text-2xl font-semibold mb-3 text-green-300">🎯 Expected Behavior</h4>
+                        <p className="text-lg leading-relaxed">
+                            Your bot should roam around the room and turn automatically without hitting any obstacles.
+                        </p>
+                    </div>
+
+
+                    <div className="mb-6 flex justify-center">
+                        <img
+                            src={g5}
+                            alt="Tony Stark wishes you best of luck"
+                            className="rounded-xl w-full max-w-5xl h-auto border-2 border-blue-400/20"
+                        />
+                    </div>
+
+                    <p className="text-lg leading-relaxed text-center italic text-xl font-semibold text-blue-300">
+                        Tony Stark wishes you best of luck!!!
+                    </p>
                 </section>
 
             </div>
 
-    
+
         </div>
     );
 }

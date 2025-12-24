@@ -11,6 +11,8 @@ import w2 from '../assets/week3_p1_w2.png';
 import w3 from '../assets/week3_p1_w3.png';
 import w4 from '../assets/week3_p1_w4.png';
 import w5 from '../assets/week3_p1_w5.png';
+
+import cvbridgeImg from '../assets/cvbridge3.png'
 // Reusable CodeBlock component
 function CodeBlock({ code, language = 'python', maxHeight = '300px' }) {
     const [copied, setCopied] = useState(false);
@@ -421,6 +423,30 @@ print(cv.__version__)`}
                             this link
                         </a>. This installation can take some time so have patience.
                     </p>
+                </section>
+                    
+                <section id="cv-bridge" className="glass-strong rounded-2xl p-8 mb-12">
+                    <h2 className="text-4xl font-bold mb-6 text-blue-400 border-l-4 border-blue-400 pl-6">cv_bridge</h2>
+                    
+                    <p className="text-lg mb-4">
+                        Now that we are familiar with the basics of OpenCV and ROS2, we can finally talk about integrating these two and performing various operations on images such as image detection.
+                    </p>
+                    
+                    <p className="text-lg mb-4">
+                        However, in ROS2, the format of the images being processed (ROS2 image Message) is quite different than that used in OpenCV (cv::Mat). This is where the library <code className="bg-gray-800 px-2 py-1 rounded">cv_bridge</code> comes to the rescue!
+                    </p>
+                    
+                    <p className="text-lg mb-6">
+                        We create a publisher-subscriber model to import and export images out of ROS into OpenCV and back into ROS.
+                    </p>
+                    
+                    <div className="flex justify-center">
+                        <img 
+                            src={cvbridgeImg}
+                            alt="cv_bridge architecture diagram" 
+                            className="rounded-lg shadow-lg max-w-md"
+                        />
+                    </div>
                 </section>
 
                 {/* Image Processing with OpenCV */}

@@ -44,7 +44,7 @@ export default function WinteROS() {
       0: '/week0',  // Change to your actual Week 0 URL
       1: '/week1',  // Change to your actual Week 1 URL
       2: '/week2p1',  // Change to your actual Week 2 URL
-      3: '/week3',  // Change to your actual Week 3 URL
+      3: '/week3p1',  // Change to your actual Week 3 URL
       4: '/week4',  // Change to your actual Week 4 URL
       5: '/week5'   // Change to your actual Week 5 URL
     };

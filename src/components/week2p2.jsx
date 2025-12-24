@@ -1312,7 +1312,7 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                                 <code className="text-green-400">source install/setup.bash</code>
                             </div>
                         </div>
-                        
+
                         <p className="text-lg leading-relaxed mb-4">
                             Launch the simulation:
                         </p>
@@ -1350,6 +1350,30 @@ Expecting Camera Info on topic [/camera/image/camera_info]. No CameraInfo receiv
                         Tony Stark wishes you best of luck!!!
                     </p>
                 </section>
+
+                {/* Week 3 Link Section */}
+                <section id="week3-link" className="glass-strong rounded-2xl p-8 mb-12">
+                    <div className="mt-8 text-center">
+                        <p className="text-xl font-semibold text-blue-300 mb-4">
+                            ▶️ Initiate Next Sequence: Week 3 — JARVIS: Vision & Navigation
+                        </p>
+
+                        <p className="text-lg text-gray-300 mb-6">
+                            This is where autonomy begins.
+                            <br />
+                            In Week 3, you give your robot <strong className="text-yellow-300">eyes and intent</strong> —
+                            processing vision with OpenCV, understanding its world with SLAM, and navigating it intelligently.
+                        </p>
+
+                        <a
+                            href="/week3p1"   // adjust route if needed
+                            className="glass px-10 py-4 rounded-full text-lg font-semibold text-yellow-300 border-2 border-yellow-300/40 transition-all duration-300 hover:bg-yellow-300/10 hover:border-yellow-300/70"
+                        >
+                            🤖 Enter Week 3: JARVIS — Vision & Navigation
+                        </a>
+                    </div>
+                </section>
+
 
             </div>
 

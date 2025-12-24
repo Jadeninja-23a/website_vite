@@ -139,7 +139,26 @@ export default function Week3Part2() {
                     </div>
                 </section>
 
-
+                <section className="glass-strong rounded-2xl p-6 mb-8 border-l-4 border-yellow-400">
+                    <div className="flex items-start gap-4">
+                        <div className="text-yellow-400 text-2xl">ℹ️</div>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2 text-yellow-400">Note</h3>
+                            <p className="text-lg">
+                                In this section, we'll be primarily focusing on the <strong>implementation</strong> of navigation algorithms on our ROS2 robot. 
+                                If you'd like a deeper understanding of how these algorithms work under the hood, check out this helpful playlist:
+                            </p>
+                            <a 
+                                href="https://youtu.be/Fw8JQ5Q-ZwU" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block mt-3 text-blue-400 hover:text-blue-300 underline transition-colors"
+                            >
+                                Navigation Algorithms Explained →
+                            </a>
+                        </div>
+                    </div>
+                </section>
 
                 <section id="autonomous-nav" className="glass-strong rounded-2xl p-8 mb-12">
                     <h2 className="text-4xl font-bold mb-4 text-blue-400 border-l-4 border-blue-400 pl-6">Autonomous Navigation</h2>

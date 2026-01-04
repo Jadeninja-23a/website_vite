@@ -4,11 +4,12 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // 👈 Add this line
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
   server: {
-    host: '0.0.0.0',  // 👈 allows connections from your phone
-    port: 3000,       // 👈 optional, sets fixed port
+    host: '0.0.0.0',
+    port: 3000,
   },
 });
